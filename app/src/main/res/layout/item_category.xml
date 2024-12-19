@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="pos"
+            type="Integer" />
+
+        <variable
+            name="model"
+            type="com.techfathers.gifstorm.models.CategoryModel" />
+
+        <variable
+            name="callback"
+            type="com.techfathers.gifstorm.ui.base.BaseItem.OnItemClickListener" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4sdp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="@{(v)->callback.onItemClick(v,model,pos)}"
+        app:cardCornerRadius="@dimen/_15sdp"
+        app:cardElevation="@dimen/_4sdp"
+        app:rippleColor="@color/white">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/CustomTextViewBold"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:text="@{model.name}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp"
+            app:setCustomBackground="@{model.background}"
+            tools:background="@drawable/bg_gradient_5"
+            tools:text="#smilly" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

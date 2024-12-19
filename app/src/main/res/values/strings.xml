@@ -1,0 +1,29 @@
+<resources>
+
+    <string name="app_name">Gif Storm</string>
+    <string name="dummy">Dummy</string>
+    <string name="share_app">Share Gif Storm</string>
+    <string name="hd">HD</string>
+    <string name="liked">Liked</string>
+    <string name="trending">Trending</string>
+    <string name="application_not_found">Application not found!</string>
+    <string name="search_tenor">Search Tenor</string>
+    <string name="share_app_content" translatable="false">“Let me recommend you one of the best Application to see and share worlds\'s top funny and viral GIFs”
+
+\n\nAn application that make you lough.
+\n\nThis application is free to use :
+\nhttps://play.google.com/store/apps/details?id=com.techfathers.gifstorm</string>
+    <string name="time_to_update">Time To Update</string>
+    <string name="update_app">Update App</string>
+    <string name="via_tenor">Via Tenor</string>
+    <string name="powered_by_tenor">Powered By Tenor</string>
+    <string name="permission_required">Permissions Required</string>
+    <string name="permission_msg">Needs all permissions to work properly. Grant them in settings. And try again.</string>
+    <string name="permission_goto">GOTO SETTINGS</string>
+    <string name="cancel">Cancel</string>
+    <string name="please_wait_for_a_second">Please wait for a second, Gif is downloading…</string>
+    <string name="required_permissions_not_granted">Required Permissions not granted</string>
+    <string name="can_you_please_update_app">Can you please update the application, so that we can serve you the better experience?</string>
+    <string name="gif_downloading">Gif Downloading</string>
+
+</resources>

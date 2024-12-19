@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/splash_fragment">
+
+    <fragment
+        android:id="@+id/splash_fragment"
+        android:name="com.techfathers.gifstorm.ui.fragments.SplashFragment"
+        tools:layout="@layout/fragment_splash">
+
+        <action
+            android:id="@+id/action_splash_fragment_to_home_fragment"
+            app:destination="@id/home_fragment"
+            app:enterAnim="@anim/activity_in"
+            app:exitAnim="@anim/activity_out"
+            app:popEnterAnim="@anim/activity_back_in"
+            app:popExitAnim="@anim/activity_back_out"
+            app:popUpTo="@id/splash_fragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.techfathers.gifstorm.ui.fragments.HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_home_fragment_to_gif_details_fragment"
+            app:destination="@id/gif_details_fragment"
+            app:enterAnim="@anim/activity_in"
+            app:exitAnim="@anim/activity_out"
+            app:popEnterAnim="@anim/activity_back_in"
+            app:popExitAnim="@anim/activity_back_out" />
+
+        <action
+            android:id="@+id/action_home_fragment_to_search_gif_fragment"
+            app:destination="@id/search_gif_fragment"
+            app:enterAnim="@anim/activity_in"
+            app:exitAnim="@anim/activity_out"
+            app:popEnterAnim="@anim/activity_back_in"
+            app:popExitAnim="@anim/activity_back_out" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/gif_details_fragment"
+        android:name="com.techfathers.gifstorm.ui.fragments.GifDetailsFragment"
+        tools:layout="@layout/fragment_gif_details">
+
+        <argument
+            android:name="result_model"
+            app:argType="com.techfathers.gifstorm.data.db.entities.ResultModel" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/search_gif_fragment"
+        android:name="com.techfathers.gifstorm.ui.fragments.SearchGifFragment"
+        tools:layout="@layout/fragment_search_gif">
+
+        <argument
+            android:name="search_term"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="true" />
+
+        <action
+            android:id="@+id/action_search_gif_fragment_to_gif_details_fragment"
+            app:destination="@id/gif_details_fragment"
+            app:enterAnim="@anim/activity_in"
+            app:exitAnim="@anim/activity_out"
+            app:popEnterAnim="@anim/activity_back_in"
+            app:popExitAnim="@anim/activity_back_out" />
+
+    </fragment>
+
+</navigation>

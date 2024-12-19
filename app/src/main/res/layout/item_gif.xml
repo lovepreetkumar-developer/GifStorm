@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="pos"
+            type="Integer" />
+
+        <variable
+            name="model"
+            type="com.techfathers.gifstorm.data.db.entities.ResultModel" />
+
+        <variable
+            name="callback"
+            type="com.techfathers.gifstorm.ui.base.BaseItem.OnItemClickListener" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/imagePost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_6sdp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:onClick="@{(v)->callback.onItemClick(v,model,pos)}"
+        app:cardCornerRadius="@dimen/_12sdp"
+        app:cardElevation="@dimen/_4sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/image_placeholder"
+            app:load_gif="@{model.media.get(0).nanogif.url}"
+            app:placeholder="@{@drawable/image_placeholder}" />
+
+        <!--tools:src="@drawable/ic_image_placeholder"-->
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

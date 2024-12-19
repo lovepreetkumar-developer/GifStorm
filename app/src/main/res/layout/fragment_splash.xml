@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="callback"
+            type="com.techfathers.gifstorm.ui.base.BaseCallback" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:scaleType="fitXY"
+            android:src="@drawable/image_splash" />
+
+        <com.techfathers.gifstorm.util.custom_classes.CustomBorderTextView
+            style="@style/CustomTextViewExtraBold"
+            android:layout_above="@+id/view"
+            android:layout_centerHorizontal="true"
+            android:text="@string/app_name"
+            android:textSize="@dimen/_24sdp"
+            app:strokeColor="@color/white"
+            app:strokeWidth="0.5dp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+</layout>

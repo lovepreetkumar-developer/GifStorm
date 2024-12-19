@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="pos"
+            type="Integer" />
+
+        <variable
+            name="model"
+            type="com.techfathers.gifstorm.models.SocialMediaTypeModel" />
+
+        <variable
+            name="callback"
+            type="com.techfathers.gifstorm.ui.base.BaseItem.OnItemClickListener" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:onClick="@{(v)->callback.onItemClick(v,model,pos)}"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/ic_facebook"
+            app:simple_resource="@{model.image}" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/CustomTextViewBold"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@{model.name}"
+            android:textSize="@dimen/_8sdp"
+            tools:text="WhatsApp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>
